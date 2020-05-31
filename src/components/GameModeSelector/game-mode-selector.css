@@ -1,27 +1,36 @@
 .gameModeList {
     display: flex;
-    justify-content: space-evenly;
-    background-color: #232f3e;
+    justify-content: center;
+    background-color: #102435;
     position: fixed;
     top: 0;
     width: 100%;
 }
 
+.gameModeList p:hover {
+    background-color: #132f46;
+}
+
 .gameModeList p {
     font-size: x-large;
-    width: 25%;
-    max-width: 300px;
+    width: 300px;
     text-align: center;
     margin: 0;
     padding-top: 1em;
     padding-bottom: 1em;
+    padding-left: .5em;
+    padding-right: .5em;
     cursor: pointer;
+    transition: background-color 0.25s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .gameModeList p.active {
-    color: #232f3e;
+    color: #102435;
     background-color: #f2fbff;
-    border-top: 1px solid #232f3e;
+    border-top: 1px solid #102435;
     /* border-top: 1px solid darkgreen;
     border-left: 1px solid darkgreen;
     border-right: 1px solid darkgreen;
