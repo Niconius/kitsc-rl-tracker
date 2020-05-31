@@ -7,19 +7,14 @@
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    border-left: 3px solid mediumvioletred;
+    border-left: 3px solid #009682;
     width: -webkit-fill-available;
     max-width: 500px;
+    transition: box-shadow 50ms;
 }
 
 .playerItem:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.34);
-}
-
-@media screen and (max-width: 583px) {
-    .playerItem:first-child {
-        margin-top: 37px;
-    }
 }
 
 .playerItem .baseInfoContainer {
@@ -30,7 +25,7 @@
 .playerItem .listRank {
     margin-left: 1em;
     font-size: x-large;
-    color: mediumvioletred;
+    color: #009682;
     width: 18px;
 }
 
@@ -57,7 +52,7 @@
 }
 
 .rankAndMMRContainer .mmr {
-    color: mediumvioletred;
+    color: #009682;
     font-weight: bold;
     margin-left: 0.7em;
     margin-right: 1em;
