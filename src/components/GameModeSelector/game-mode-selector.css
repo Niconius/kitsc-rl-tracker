@@ -23,8 +23,6 @@
     cursor: pointer;
     transition: background-color 0.25s;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .gameModeList p.active {
@@ -40,4 +38,10 @@
 
 .gameModeList p.inactive {
     color: #f2fbff;
+}
+
+@media screen and (max-width: 472px) {
+    .gameModeList p {
+        font-size: medium;
+    }
 }
