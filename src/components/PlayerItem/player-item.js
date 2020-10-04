@@ -29,14 +29,18 @@ class PlayerItem extends React.Component {
             <div className="playerItem">
                 <div className="baseInfoContainer">
                     <p className="listRank">{this.props.rank}</p>
-                    <img src={this.props.player.steam_picture_url}></img>
+                    <a href={`http://steamcommunity.com/profiles/${this.props.player.steam_id}`} target="_blank">
+                        <img src={this.props.player.steam_picture_url}></img>
+                    </a>
                     <div className="nameContainer">
                         <p className="playerName">{this.props.player.name}</p>
                         <p className="teamName">{this.props.player.team_name}</p>
                     </div>
                 </div>
                 <div className="rankAndMMRContainer">
-                    <img src={rank}/>
+                    <a href={`https://rocketleague.tracker.network/rocket-league/profile/steam/${this.props.player.steam_id}/overview`} target="_blank">
+                        <img src={rank}/>
+                    </a>
                     <p className="mmr">{mmr}</p>
                 </div>
             </div>
