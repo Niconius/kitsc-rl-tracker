@@ -34,11 +34,16 @@
     width: 18px;
 }
 
-.baseInfoContainer img {
+.baseInfoContainer a {
     border-radius: 50%;
     width: 55px;
     margin-left: 2em;
     margin-right: 1em;
+}
+
+.baseInfoContainer img {
+    border-radius: 50%;
+    width: 55px;
     box-shadow: 0 0 5px 0 rgba(43,43,43,.3), 0 11px 6px -7px rgba(43,43,43,.3);
 }
 
