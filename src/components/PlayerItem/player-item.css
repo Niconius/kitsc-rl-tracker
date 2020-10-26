@@ -11,6 +11,7 @@
     width: -webkit-fill-available;
     max-width: 500px;
     transition: box-shadow 50ms;
+    overflow: hidden;
 }
 
 .dark .playerItem {
@@ -39,6 +40,7 @@
     width: 55px;
     margin-left: 2em;
     margin-right: 1em;
+    display: flex;
 }
 
 .baseInfoContainer img {
@@ -62,6 +64,9 @@
 
 .rankAndMMRContainer a {
     align-self: center;
+    z-index: 2;
+    position: relative;
+    display: flex;
 }
 
 .playerItem .rankAndMMRContainer {
@@ -82,6 +87,21 @@
     width: 40px;
     height: 40px;
     align-self: center;
+}
+
+.rankImgBackground {
+    background-color: #009682;
+    height: 120px;
+    width: 80px;
+    transform: translate(-9px,-28px) rotateZ(18deg);
+    position: absolute;
+    z-index: 1;
+}
+
+.rankContainer {
+    position: relative;
+    display: flex;
+    margin-left: 8px;
 }
 
 @media screen and (max-width: 459px) {

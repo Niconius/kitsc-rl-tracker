@@ -38,10 +38,13 @@ class PlayerItem extends React.Component {
                     </div>
                 </div>
                 <div className="rankAndMMRContainer">
-                    <a href={`https://rocketleague.tracker.network/rocket-league/profile/steam/${this.props.player.steam_id}/overview`} target="_blank">
-                        <img src={rank}/>
-                    </a>
                     <p className="mmr">{mmr}</p>
+                    <div className="rankContainer">
+                        <div className="rankImgBackground" />
+                        <a href={`https://rocketleague.tracker.network/rocket-league/profile/steam/${this.props.player.steam_id}/overview`} target="_blank">
+                            <img src={rank}/>
+                        </a>
+                    </div>
                 </div>
             </div>
         );
