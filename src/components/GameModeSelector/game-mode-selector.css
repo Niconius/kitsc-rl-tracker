@@ -23,21 +23,29 @@
     cursor: pointer;
     transition: background-color 0.25s;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .gameModeList p.active {
     color: #102435;
     background-color: #f2fbff;
     border-top: 1px solid #102435;
-    /* border-top: 1px solid darkgreen;
-    border-left: 1px solid darkgreen;
-    border-right: 1px solid darkgreen;
-    position: relative;
-    top: 1px; */
+}
+
+.dark .gameModeList p.active {
+    background-color: #003952;
+    color: #f2fbff;
 }
 
 .gameModeList p.inactive {
     color: #f2fbff;
+}
+
+.dark .gameModeList p.inactive {
+    color: grey;
+}
+
+@media screen and (max-width: 472px) {
+    .gameModeList p {
+        font-size: medium;
+    }
 }

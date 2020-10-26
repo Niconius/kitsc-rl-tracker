@@ -13,6 +13,10 @@
     transition: box-shadow 50ms;
 }
 
+.dark .playerItem {
+    background-color: #102435;
+}
+
 .playerItem:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.34);
 }
@@ -20,6 +24,7 @@
 .playerItem .baseInfoContainer {
     display: flex;
     align-items: center;
+    min-width: 250px;
 }
 
 .playerItem .listRank {
@@ -29,11 +34,16 @@
     width: 18px;
 }
 
-.baseInfoContainer img {
+.baseInfoContainer a {
     border-radius: 50%;
     width: 55px;
     margin-left: 2em;
     margin-right: 1em;
+}
+
+.baseInfoContainer img {
+    border-radius: 50%;
+    width: 55px;
     box-shadow: 0 0 5px 0 rgba(43,43,43,.3), 0 11px 6px -7px rgba(43,43,43,.3);
 }
 
@@ -41,9 +51,17 @@
     margin: 0;
 }
 
+.dark .nameContainer .playerName {
+    color: white;
+}
+
 .nameContainer .teamName {
     color: grey;
     margin: 0;
+}
+
+.rankAndMMRContainer a {
+    align-self: center;
 }
 
 .playerItem .rankAndMMRContainer {
@@ -64,4 +82,47 @@
     width: 40px;
     height: 40px;
     align-self: center;
+}
+
+@media screen and (max-width: 459px) {
+    .playerItem .rankAndMMRContainer {
+        flex-direction: column;
+        margin-right: 2em;
+    }
+    
+    .rankAndMMRContainer .mmr {
+        margin-bottom: 0.5em;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .playerItem {
+        min-width: min-content;
+    }
+
+    .playerItem .rankAndMMRContainer {
+        margin-right: 1em;
+    }
+
+    .baseInfoContainer .nameContainer {
+        overflow-wrap: anywhere;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .baseInfoContainer img {
+        margin-left: 0.9em;
+    }
+
+    .playerItem .baseInfoContainer {
+        min-width: 225px;
+    }
+
+    .playerItem .listRank {
+        margin-left: 0.7em;
+    }
 }
