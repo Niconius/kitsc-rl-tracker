@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: white;
-    border-left: 3px solid #009682;
+    border-left: 3px solid #003952;
     width: -webkit-fill-available;
     max-width: 500px;
     transition: box-shadow 50ms;
@@ -15,6 +15,7 @@
 
 .dark .playerItem {
     background-color: #102435;
+    border-color: #009682;
 }
 
 .playerItem:hover {
@@ -24,14 +25,18 @@
 .playerItem .baseInfoContainer {
     display: flex;
     align-items: center;
-    min-width: 250px;
+    min-width: 230px;
 }
 
 .playerItem .listRank {
     margin-left: 1em;
     font-size: x-large;
-    color: #009682;
+    color: #003952;
     width: 18px;
+}
+
+.dark .playerItem .listRank {
+    color: #009682;
 }
 
 .baseInfoContainer a {
@@ -64,17 +69,34 @@
     align-self: center;
 }
 
+.rankAndMMRContainer .rankContainer {
+    background-color: #003952;
+    height: 100%;
+    display: flex;
+    padding: 0 0.5em 0 0.5em;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.dark .rankAndMMRContainer .rankContainer {
+    background-color: #102435;
+}
+
 .playerItem .rankAndMMRContainer {
     display: flex;
-    margin-right: 1em;
+    height: 100%;
+    align-items: center;
 }
 
 .rankAndMMRContainer .mmr {
-    color: #009682;
+    color: #003952;
     font-weight: bold;
     margin-left: 0.7em;
     margin-right: 1em;
-    width: 37px;
+}
+
+.dark .rankAndMMRContainer .mmr {
+    color: #009682;
 }
 
 .rankAndMMRContainer img {
@@ -86,16 +108,29 @@
 
 @media screen and (max-width: 459px) {
     .playerItem .rankAndMMRContainer {
-        flex-direction: column;
-        margin-right: 2em;
+        flex-flow: column-reverse;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        padding: 0 0.5em 0 0.5em;
+        background-color: #003952;
+    }
+
+    .dark .playerItem .rankAndMMRContainer {
+        background-color: inherit;
+    }
+
+    .rankAndMMRContainer .rankContainer {
+        background-color: inherit;
+        margin-top: 0.2em;
     }
     
     .rankAndMMRContainer .mmr {
-        margin-bottom: 0.5em;
+        margin-bottom: 0.8em;
         margin-top: 0;
         margin-right: 0;
         margin-left: 0;
         text-align: center;
+        color: white;
     }
 }
 
@@ -104,25 +139,17 @@
         min-width: min-content;
     }
 
-    .playerItem .rankAndMMRContainer {
-        margin-right: 1em;
-    }
-
     .baseInfoContainer .nameContainer {
         overflow-wrap: anywhere;
     }
 }
 
-@media screen and (max-width: 350px) {
-    .baseInfoContainer img {
-        margin-left: 0.9em;
-    }
-
-    .playerItem .baseInfoContainer {
-        min-width: 225px;
+@media screen and (max-width: 390px) {
+    .baseInfoContainer a {
+        margin-left: 1.5em;
     }
 
     .playerItem .listRank {
-        margin-left: 0.7em;
+        margin-left: 0.5em;
     }
 }
