@@ -44,6 +44,7 @@
     width: 55px;
     margin-left: 2em;
     margin-right: 1em;
+    display: flex;
 }
 
 .baseInfoContainer img {
@@ -67,6 +68,7 @@
 
 .rankAndMMRContainer a {
     align-self: center;
+    display: flex;
 }
 
 .rankAndMMRContainer .rankContainer {
