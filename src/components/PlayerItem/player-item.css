@@ -80,6 +80,7 @@
 
 .dark .rankAndMMRContainer .rankContainer {
     background-color: #102435;
+    padding-right: 1em;
 }
 
 .playerItem .rankAndMMRContainer {
@@ -97,6 +98,7 @@
 
 .dark .rankAndMMRContainer .mmr {
     color: #009682;
+    margin-right: 0.5em;
 }
 
 .rankAndMMRContainer img {
@@ -117,11 +119,20 @@
 
     .dark .playerItem .rankAndMMRContainer {
         background-color: inherit;
+        padding: 0 1em 0 1em;
     }
 
     .rankAndMMRContainer .rankContainer {
         background-color: inherit;
         margin-top: 0.2em;
+    }
+
+    .dark .rankAndMMRContainer .rankContainer {
+        padding: 0em;
+    }
+
+    .dark .rankAndMMRContainer .mmr {
+        margin-right: 0em;
     }
     
     .rankAndMMRContainer .mmr {
