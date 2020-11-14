@@ -42,6 +42,7 @@
 .baseInfoContainer a {
     border-radius: 50%;
     width: 55px;
+    height: 55px;
     margin-left: 2em;
     margin-right: 1em;
     display: flex;
